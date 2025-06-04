@@ -51,4 +51,4 @@ jobs:
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
             docker stop my-nextjs-app || true
             docker rm my-nextjs-app || true
-            docker run -d --name my-nextjs-app -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+            docker run -d --pull always --name my-nextjs-app -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
