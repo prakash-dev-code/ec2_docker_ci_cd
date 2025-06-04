@@ -9,7 +9,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: nextjs-app
+  IMAGE_NAME: my-nextjs-app
   IMAGE_TAG: latest
 
 jobs:
@@ -50,6 +50,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
-            docker stop nextjs-app || true
-            docker rm nextjs-app || true
-            docker run -d --name nextjs-app -p 80:3000 ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+            docker stop my-nextjs-app || true
+            docker rm my-nextjs-app || true
+            docker run -d --name my-nextjs-app -p 80:3000 ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
