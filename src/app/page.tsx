@@ -50,7 +50,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Read our docs
+            DOCKER NGINX
           </a>
         </div>
       </main>
