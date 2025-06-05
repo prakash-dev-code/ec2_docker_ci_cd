@@ -50,7 +50,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            DOCKER NGINX SETUP
+            DOCKER NGINX SETUP NEW
           </a>
         </div>
       </main>
